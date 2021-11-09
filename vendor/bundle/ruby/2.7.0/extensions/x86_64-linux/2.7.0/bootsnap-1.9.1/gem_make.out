@@ -1,0 +1,15 @@
+current directory: /home/developer/app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+/home/developer/.rvm/rubies/ruby-2.7.4/bin/ruby -I /home/developer/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20211109-33563-owucmu.rb extconf.rb
+creating Makefile
+
+current directory: /home/developer/app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/developer/app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/developer/app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20211109-33563-1utn0wy/bootsnap
