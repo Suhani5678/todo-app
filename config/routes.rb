@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
+  resources :jobs
+  root 'jobs#index'
+  #root 'home#index'
+  
+  get "/jobs", to: "jobs#index"
+
   devise_for :users
 
   devise_scope :user do  

@@ -1,0 +1,56 @@
+
+  <%= form_with model: @job do |form| %>
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+
+    <div>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+    </div>
+
+    <div>
+      <%= form.label :qualification %><br>
+      <%= form.text_field :qualification %>
+    </div>
+
+    <div>
+      <%= form.label :required_skils %><br>
+      <%= form.text_field :required_skils %>
+    </div>
+
+    <div>
+      <%= form.label :number_of_position %><br>
+      <%= form.text_field :number_of_position %>
+    </div>
+
+    <div>
+      <%= form.label :location %><br>
+      <%= form.text_field :location %>
+    </div>
+
+    <div>
+      <%= form.label :employment_type %><br>
+      <%= form.text_field :employment_type %>
+    </div>
+
+    <div>
+      <%= form.label :joining_time %><br>
+      <%= form.text_field :joining_time %>
+    </div>
+
+    <div>
+    <%= form.label :package %><br>
+    <%= form.text_field :package %>
+    </div>
+
+    <div>
+      <%= form.label :experience_required %><br>
+      <%= form.text_field :experience_required %>
+    </div>
+    
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>

@@ -1,0 +1,21 @@
+<div class="container">
+  
+  <h1>Listing Jobs</h1>
+  
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+
+  
+    <% @jobs.each do |job| %>
+      <tr>
+        <h4><%= job.title %></h4>
+        <td><h6 class=""><%= truncate(job.description, :length => 30) %><%= job.description %></td>
+        <td><%= link_to 'Show', show_job_path(job) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
