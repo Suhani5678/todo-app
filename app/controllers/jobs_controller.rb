@@ -23,6 +23,14 @@ class JobsController < ApplicationController
     end
   end
   
+  def apply_for_job
+    @job_application = JobApplication.new
+    @job_application.user_id = current_user.id
+    @job_application.job_id = params[:id]
+    @job_application.save!
+    redirect_to jobs_path, notice: "successfully applied to job"
+  end
+
   def edit
     @job = Job.find(params[:id])
   end

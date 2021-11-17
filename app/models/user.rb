@@ -5,4 +5,6 @@ class User < ApplicationRecord
 
   has_many :jobs
   has_many :job_applications
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
 end

@@ -21,10 +21,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 
 gem "rolify"
-
-gem 'simple_form'
-
+gem 'bootstrap'
 # gem 'redis', '~> 4.0'
+#gem 'bootstrap-sass', '~> 3.3.6'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

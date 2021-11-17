@@ -1,9 +1,15 @@
-<h3><%= @job.title %></h3>
-<p><%= @job.description %></p>
-<% if current_user.has_role? :admin %>
-  <%= link_to "Edit", edit_job_path(@job) %>
-  <%= button_to "Destroy", job_path(@job),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-<% end %>
-
+<div class ="container">
+  <%= link_to "Apply for this job", apply_for_job_job_path(@job.id), class: "btn btn-primary badge"  %>
+  <h3><%= @job.title %></h3>
+  <p><%= @job.description %></p>
+  <p><%= @job.qualification%></p>
+  <p><%= @job.required_skills %></p>
+  <p><%= @job.employment_type %></p>
+  <p><%= @job.number_of_position%></p>
+  <p><%= @job.location %></p>
+  <p><%= @job.joining_time%></p>
+  <% if current_user.has_role? :admin %>
+    <%= link_to "Edit", edit_job_path(@job) %>
+    <%= button_to "Destroy", job_path(@job), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</div>
