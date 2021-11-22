@@ -1,11 +1,6 @@
 
-  
+<div class="contaoner-fluid">
   <h1>Listing Jobs</h1>
-  
-  
-
-  
-  
     <% @jobs.each do |job| %>
       <tr>
         <h4><%= job.title %></h4>
@@ -13,5 +8,4 @@
         <td> <%= link_to 'show' , job %> </td>
       </tr>
     <% end %>
-  </table>
-
+</div>

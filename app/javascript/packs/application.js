@@ -8,6 +8,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import ChatConversation from '../channels/conversation_channel'
 
 require("jquery")
 
@@ -17,3 +18,12 @@ ActiveStorage.start()
 
 import "bootstrap"
 import "../stylesheets/application"
+
+
+$(document).on('submit', '.new_message', function(e) {
+  e.preventDefault();
+  var values = $(this).serializeArray();
+  ChatConversation.speak(values);
+  $(this).trigger('reset');
+});
+  
