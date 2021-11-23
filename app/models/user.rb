@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :job_applications
   has_many :messages
   has_many :conversations, foreign_key: :sender_id
+
+  has_one_attached :resume
+
 end

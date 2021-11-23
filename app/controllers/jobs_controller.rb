@@ -29,6 +29,9 @@ class JobsController < ApplicationController
     @job_application.job_id = params[:id]
     @job_application.save!
     redirect_to jobs_path, notice: "successfully applied to job"
+    if @job_application.save
+      UserMailer.new_job_application_email(params[:id], current_user.id).deliver_now
+    end
   end
 
   def edit
